@@ -1,0 +1,158 @@
+/* Base Reset and Typography */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #0a0a0a;
+  color: #e0e0e0;
+  line-height: 1.6;
+  padding: 1rem;
+}
+
+/* Color Palette */
+:root {
+  --bg-dark: #0a0a0a;
+  --gray: #333;
+  --light-gray: #ccc;
+  --white: #f5f5f5;
+  --green-ooze: #7fff00;
+}
+
+/* Layout */
+header, footer {
+  background-color: var(--gray);
+  padding: 1rem;
+  border-bottom: 2px solid var(--green-ooze);
+}
+
+header h1, footer p {
+  color: var(--green-ooze);
+  text-align: center;
+}
+
+nav {
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+nav a {
+  color: var(--white);
+  text-decoration: none;
+  margin: 0 0.5rem;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: var(--green-ooze);
+}
+
+main {
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+h2, h3 {
+  color: var(--green-ooze);
+  border-bottom: 1px solid var(--light-gray);
+  padding-bottom: 0.3rem;
+}
+
+ul {
+  list-style-type: square;
+  padding-left: 1.5rem;
+}
+
+img {
+  border: 2px solid var(--green-ooze);
+  margin: 0.5rem;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Responsive Video */
+iframe {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  border: 2px solid var(--green-ooze);
+  display: block;
+  margin: 0 auto;
+}
+
+/* Footer */
+footer {
+  margin-top: 2rem;
+  border-top: 2px solid var(--green-ooze);
+}
+
+/* Media Queries */
+
+/* Mobile (≤480px) */
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+    overflow-x: hidden;
+  }
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  main {
+    padding: 1rem 0.5rem;
+  }
+}
+
+/* Tablet (481px–768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  body {
+    font-size: 15px;
+  }
+
+  main {
+    padding: 1.5rem;
+  }
+
+  nav {
+    flex-wrap: wrap;
+  }
+}
+
+/* Laptop (769px–1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  body {
+    font-size: 16px;
+  }
+
+  main {
+    padding: 2rem;
+  }
+}
+
+/* Desktop (1025px and up) */
+@media (min-width: 1025px) {
+  body {
+    font-size: 18px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  main {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
